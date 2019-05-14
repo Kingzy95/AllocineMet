@@ -271,7 +271,7 @@ nav ul li a:hover::after{
 
 
 .parallax {
-  background-image: url(../img/netflix%20background.jpg);
+  background-image: url(../img/FR-fr-20190506-popsignuptwoweeks-perspective_alpha_website_medium.jpg);
 
   /* Set a specific height */
   min-height: 500px;
@@ -412,7 +412,7 @@ nav ul li a:hover::after{
     text-align: center;
     font-size: 15px;
     padding: 3rem;
-    background: #333;
+    background: -webkit-linear-gradient(top, #333 0%, #000 100%);
 }
 
 .footer-copyright a {

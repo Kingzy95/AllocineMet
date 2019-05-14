@@ -173,7 +173,7 @@ ol {
 }
 
 .author-archive {
-  padding: 1.5rem;
+    padding: 1.5rem;
 }
 
 .container_films {
@@ -182,45 +182,70 @@ ol {
     margin: 0 auto;
 }
 
+.filtres{
+    position: absolute;
+}
+
 input[type="radio"] {
   position: absolute;
   left: -9999px;
 }
 
-form {
-    position: absolute;
-    border: 2px solid #333;
-    border-radius: 30px;
-    background: -webkit-linear-gradient(top, #333 0%, #000 100%);
-    padding: 0;
-    margin: 0;
-    height: 25px;
+/*** STYLES ***/
+.search {
+  display: inline-block;
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  box-sizing: border-box;
+  margin: 0px 8px 7px 0px;
+  padding: 7px 9px 0px 9px;
+  border: 3px solid #ffffff;
+  border-radius: 25px;
+  transition: all 200ms ease;
+  cursor: text;
 }
 
-form input {
-    border-radius: 50px;
-    border: none;
-    height: 19px;
-    outline: none;
-    padding: 0px 10px 0px 20px;
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAQAAABedl5ZAAAAzklEQ…NfgMEA6AEDBg4g26Br%2FffvqeUMWIEBULcEdikGkG4AzGOfgUQC7TUAAAAASUVORK5CYII%3D') no-repeat 5px center;
-    box-shadow: inset 0px 0px 5px rgba (0,0,0,0.4);
-    color: #fff;
-    width: 100px;
+.search:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 20px;
+  right: -5px;
+  top: 21px;
+  background: #ffffff;
+  border-radius: 3px;
+  transform: rotate(-45deg);
+  transition: all 200ms ease;
 }
 
-form input:focus {
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAQAAABedl5ZAAAAzklEQ…NfgMEA6AEDBg4g26Br%2FffvqeUMWIEBULcEdikGkG4AzGOfgUQC7TUAAAAASUVORK5CYII%3D') no-repeat 5px center;;
-    width: 150px;
-    color: #fff;
-    text-shadow: 0px 1px 0px #fff;
+.search.active,
+.search:hover {
+  width: 200px;
+  margin-right: 0px;
+}
+
+.search.active:after,
+.search:hover:after {
+  height: 0px;
+}
+
+.search input {
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: 15px;
+  color: #fff;
+  background: #000;
+  outline-width: 0px;
 }
 
 /* FILTERS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .filters {
   text-align: center;
-  margin: 2.5rem 0;
+  margin: 5rem 0 0 ;
 }
 
 .filters * {
@@ -229,9 +254,9 @@ form input:focus {
 
 .filters label {
     text-transform: uppercase;
-    padding: 0.2rem 1rem;
+    padding: 0.1rem 1rem;
     margin-bottom: 1.1rem;
-    margin-top: 1.1rem;
+    margin-top: 1rem;
     min-width: 50px;
     cursor: pointer;
     font-size: 15px;
@@ -242,29 +267,27 @@ form input:focus {
 
 .filters label:hover {
     text-decoration: underline;
-    opacity: ;
-    color: red;
+    opacity: 0.9;
+    color: ;
 }
 
 /* FILTERED ELEMENTS (POSTS)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .posts {
+    display: none;
     display: grid;
-    grid-gap: 10px ;
+    grid-gap: 0.7rem;
     grid-template-columns: repeat(4, 1fr);
-    margin-left: 55px;
 }
 
 .posts .post {
-    width: 100%;
-    background: #000;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .posts .post-title {
-    font-size: 15px;
-    font-weight: bolder;
-    text-transform: uppercase;
+    display: ;
+  font-size: 1rem;
 }
 
 .posts .post-title:hover {
@@ -272,11 +295,8 @@ form input:focus {
 }
 
 .posts figcaption {
-  padding: 1rem ;
-}
-
-.post figcaption a:hover{
-    margin: 0 40px;
+    display: ;
+    padding: 1rem 0 1rem 0;
 }
 
 .posts .post-categories {
@@ -288,14 +308,13 @@ form input:focus {
   display: inline-block;
 }
 
-
-
 .posts .post-categories li {
   margin-bottom: 0.2rem;
 }
 
 .posts .post-categories a {
-  padding: 0.2rem 0.9rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
   border: 1px solid;
   line-height: normal;
   transition: all 0.1s;
@@ -310,12 +329,12 @@ form input:focus {
 /* FILTERING RULES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 [value="All"]:checked ~ .filters [for="All"],
-[value="CSS"]:checked ~ .filters [for="CSS"],
-[value="JavaScript"]:checked ~ .filters [for="JavaScript"],
-[value="jQuery"]:checked ~ .filters [for="jQuery"],
-[value="WordPress"]:checked ~ .filters [for="WordPress"],
-[value="Slider"]:checked ~ .filters [for="Slider"],
-[value="fullPage.js"]:checked ~ .filters [for="fullPage.js"] {
+[value="Action"]:checked ~ .filters [for="Action"],
+[value="Comédie"]:checked ~ .filters [for="Comédie"],
+[value="Fantastique"]:checked ~ .filters [for="Fantastique"],
+[value="Anime"]:checked ~ .filters [for="Anime"],
+[value="Drame"]:checked ~ .filters [for="Drame"],
+[value="Romance"]:checked ~ .filters [for="Romance"] {
   color: #fff;
 }
 
@@ -323,12 +342,12 @@ form input:focus {
   display: block;
 }
 
-[value="CSS"]:checked ~ .posts .post:not([data-category~="CSS"]),
-[value="JavaScript"]:checked ~ .posts .post:not([data-category~="JavaScript"]),
-[value="jQuery"]:checked ~ .posts .post:not([data-category~="jQuery"]),
-[value="WordPress"]:checked ~ .posts .post:not([data-category~="WordPress"]),
-[value="Slider"]:checked ~ .posts .post:not([data-category~="Slider"]),
-[value="fullPage.js"]:checked ~ .posts .post:not([data-category~="fullPage.js"]) {
+[value="Action"]:checked ~ .posts .post:not([data-category~="Action"]),
+[value="Comédie"]:checked ~ .posts .post:not([data-category~="Comédie"]),
+[value="Fantastique"]:checked ~ .posts .post:not([data-category~="Fantastique"]),
+[value="Anime"]:checked ~ .posts .post:not([data-category~="Anime"]),
+[value="Drame"]:checked ~ .posts .post:not([data-category~="Drame"]),
+[value="Romance"]:checked ~ .posts .post:not([data-category~="Romance"]) {
   display: none;
 }
 
@@ -444,8 +463,8 @@ form input:focus {
     color: #fff;
     text-align: center;
     font-size: 15px;
-    padding: 3rem;
-    background: #333;
+    padding: 2rem;
+    background: -webkit-linear-gradient(top, #333 0%, #000 100%);
 }
 
 .footer-copyright a {

@@ -58,7 +58,7 @@ nav{
 
 .title span{
     font-weight: 900;
-    color: crimson;
+    color: red;
     position: absolute;
     animation: tourne 2s forwards;
 }
@@ -152,13 +152,68 @@ nav ul li a:hover::after{
     }
 }
 
-/*------------------------------
-----pour le body des pages------
--------------------------------*/
+#content .container-2 {
+    display: block;
+}
+
+#content .title-content h2{
+    color: red;
+    font-size: 50px;
+    font-weight: lighter;
+    padding: 40px;
+    text-align: center;
+    background: -webkit-linear-gradient(top, #333 0%, #000 100%);
+}
+
+#content .row {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#content .media-info, p .list-group{
+    width: 50%;
+    height: 100%;
+    display: table-row;
+    float: right;
+    font-size: 17px;
+    font-weight: lighter;
+    color: #fff;
+    text-align: justify;
+    padding: 0 40px 0px 50px;
+}
+
+#content .synopsis {
+    display: flex;
+}
+
+#content .synopsis h5 {
+    text-transform: uppercase;
+}
+
+#content .synopsis > p{
+    padding-left: 15px;
+}
+
+#content .list-group {
+    padding: 70px 0 0px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#content .list-group h5{
+    text-transform: uppercase;
+}
+
+/* */
+
 
 #content, #real, #acteur {
-  background-color: #000;
-  padding-bottom: 20px;
+    background-color: #000;
+    padding-bottom: 20px;
+    margin: 0 auto;
 }
 
 #content, #real {
@@ -220,23 +275,25 @@ nav ul li a:hover::after{
 -----------------------------------------*/
 
 #content .media {
-  width: 70%;
-  height: 400px;
-  margin: 20px auto;
+    width: 70%;
+    height: 400px;
+    margin: 20px auto;
+    color: #fff;
 }
 
+#content .media-img {
+    width: 300px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0px;
+}
 
 /*------------------------------
 ----pour la partie texte------
 -------------------------------*/
 
 #content .text-center, #real .text-center, #acteur .text-center {
-  padding: 20px 10%;
-  width: 80%;
-}
-
-#content .text-center {
-  margin: 20px auto;
+    color: #fff;
 }
 
 #real .text-center, #acteur .text-center {
@@ -245,20 +302,16 @@ nav ul li a:hover::after{
 
 }
 
-/*------------------------------
-----pour la partie récap------
--------------------------------*/
-
-#content .row {
-  margin-bottom: 20px;
-}
 
 /*----------------------------------
 ----pour la video bande annonce------
 -----------------------------------*/
 
-#content iframe {
-  margin-top: 5%;
+#content .b-a {
+    margin-top:5%;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px 0 40px 0;
 }
 
 /*----------------------------------------
@@ -315,9 +368,11 @@ nav ul li a:hover::after{
 }
 
 
+
 /* Footer */
 
 .page-footer{
+    border-top: 1px solid #333;
     background: #000;
     margin: 0;
     padding: 0;
@@ -406,7 +461,7 @@ nav ul li a:hover::after{
     text-align: center;
     font-size: 15px;
     padding: 3rem;
-    background: #333;
+    background: -webkit-linear-gradient(top, #333 0%, #000 100%);
 }
 
 .footer-copyright a {
