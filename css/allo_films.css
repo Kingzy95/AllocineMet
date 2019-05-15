@@ -154,7 +154,7 @@ nav ul li a:hover::after{
 
 
 .title_film{
-    color: red;
+    color: #fff;
     background: -webkit-linear-gradient(top, #333 0%, #000 100%);
     font-size: 35px;
     text-align: center;
@@ -285,6 +285,11 @@ input[type="radio"] {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.posts img{
+    height: 300px;
+    width: 100%;
+}
+
 .posts .post-title {
     display: ;
   font-size: 1rem;
@@ -314,7 +319,7 @@ input[type="radio"] {
 
 .posts .post-categories a {
   padding: 0.2rem 0.5rem;
-  border-radius: 1rem;
+  border-radius: ;
   border: 1px solid;
   line-height: normal;
   transition: all 0.1s;
