@@ -27,17 +27,22 @@
 
                     </div>
             </nav>
+
         </header>
 
   <main class="contenu" id="content">
+      <?php
+  echo $_GET['id'];
+?>
       <section class="container-2">
+
             <div class="title-content" id="#">
-                <h2></h2>
+                <h2></h2>ss
             </div>
 
             <div class="row">
 
-                <img src="img/black_panther.jpg" class="media-img" alt="...">
+                <img src="img/" class="media-img" alt="...">
             <div class="media-info">
 
                 <div class="synopsis"><h5>Synopsis:</h5><p class="text-center">
