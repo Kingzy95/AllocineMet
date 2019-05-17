@@ -184,6 +184,9 @@ button:hover {
 /* Footer */
 
 .page-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background: #000;
     margin: 0;
     padding: 0;

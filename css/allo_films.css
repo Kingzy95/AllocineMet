@@ -286,13 +286,15 @@ input[type="radio"] {
 }
 
 .posts img{
-    height: 300px;
+    height: 325px;
     width: 100%;
 }
 
 .posts .post-title {
     display: ;
-  font-size: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    background: -webkit-linear-gradient(top, #333 0%, #000 100%);
 }
 
 .posts .post-title:hover {
@@ -318,11 +320,11 @@ input[type="radio"] {
 }
 
 .posts .post-categories a {
-  padding: 0.2rem 0.5rem;
-  border-radius: ;
-  border: 1px solid;
-  line-height: normal;
-  transition: all 0.1s;
+    display: none;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid;
+    line-height: normal;
+    transition: all 0.1s;
 }
 
 .posts .post-categories a:hover {
@@ -380,6 +382,9 @@ input[type="radio"] {
 /* Footer */
 
 .page-footer{
+    position: absolute;
+    bottom: ;
+    width: 100%;
     background: #000;
     margin: 0;
     padding: 0;
